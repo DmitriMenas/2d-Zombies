@@ -3,37 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
   <title>Matrix Display</title>
-  <style>
-    #matrix {
-      display: grid;
-      grid-template-columns: repeat(16, 100px); /* 16 columns, each 100px */
-      grid-template-rows: repeat(9, 100px); /* 9 rows, each 100px */
-      gap: 0; /* Remove gaps if needed */
-      justify-content: center; /* Center grid horizontally */
-      align-items: center; /* Center grid vertically */
-      height: 1500px; /* Height = 15 * 100px */
-      width: 1500px; /* Width = 15 * 100px */
-      margin: 0 auto; /* Center grid container horizontally */
-    }
-
-    .cell {
-      width: 100px; /* Cell width */
-      height: 100px; /* Cell height */
-      background-size: cover; /* Ensure background images cover the cell */
-    }
-
-    .wall {
-      background-image: url('wall.png');
-    }
-
-    .floor {
-      background-image: url('floor.png');
-    }
-  </style>
 </head>
 <body>
-    <div id="matrix"></div>
-    <script src="matrix.js"></script>
-  </body>
+  <!-- Matrix container -->
+  <div id="matrix" class="matrix"></div>
+
+  <!-- Add a canvas for player movements (if needed) -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Link to the matrix and player movement logic -->
+  <script src="matrix.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
 </html>
+
+
+
+
+
+
+

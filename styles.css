@@ -1,0 +1,31 @@
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(16, 300px); /* 16 columns */
+  grid-template-rows: repeat(9, 300px); /* 9 rows */
+  gap: 0; /* No gap between cells */
+  justify-content: center; /* Center grid horizontally */
+  align-items: center; /* Align grid vertically */
+  margin: 0 auto; /* Center the grid container horizontally */
+  z-index: 1;
+}
+
+.cell {
+  width: 300px; /* Cell width */
+  height: 300px; /* Cell height */
+  background-size: cover; /* Ensure background images cover the cell */
+}
+
+.wall {
+  background-image: url('wall.png');
+}
+
+.floor {
+  background-image: url('floor.png');
+}
+#canvas {
+  position: absolute; /* Overlay the canvas on the matrix */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Make sure canvas is on top of the matrix */
+}
