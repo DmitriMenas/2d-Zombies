@@ -5,49 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matrix Display</title>
   <style>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Optional: Background color for better contrast */
-}
+    #matrix {
+      display: grid;
+      grid-template-columns: repeat(16, 100px); /* 16 columns, each 100px */
+      grid-template-rows: repeat(9, 100px); /* 9 rows, each 100px */
+      gap: 0; /* Remove gaps if needed */
+      justify-content: center; /* Center grid horizontally */
+      align-items: center; /* Center grid vertically */
+      height: 1500px; /* Height = 15 * 100px */
+      width: 1500px; /* Width = 15 * 100px */
+      margin: 0 auto; /* Center grid container horizontally */
+    }
 
-#matrix {
-  display: grid;
-  grid-template-columns: repeat(5, 100px); /* 5 columns, 100px each */
-  grid-template-rows: repeat(5, 100px); /* 5 rows, 100px each */
-  gap: 0; /* No gap between cells */
-  width: 500px; /* 5 times the width of one cell */
-  height: 500px; /* 5 times the height of one cell */
-  transform: scale(5); /* Scale up by 5 times */
-}
+    .cell {
+      width: 100px; /* Cell width */
+      height: 100px; /* Cell height */
+      background-size: cover; /* Ensure background images cover the cell */
+    }
 
-.cell {
-  width: 100px;
-  height: 100px;
-  box-sizing: border-box;
-}
+    .wall {
+      background-image: url('wall.png');
+    }
 
-.wall {
-  background-image: url('wall.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.floor {
-  background-image: url('floor.png');
-  background-size: cover;
-  background-position: center;
-}
-
+    .floor {
+      background-image: url('floor.png');
+    }
   </style>
 </head>
 <body>
-  <div id="matrix"></div>
-  <script src="matrix.js"></script>
-</body>
+    <div id="matrix"></div>
+    <script src="matrix.js"></script>
+  </body>
 </html>
